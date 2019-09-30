@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Fetching Data fetch 1`] = `
+Array [
+  Array [
+    "https://www.googleapis.com/pagespeedonline/v4/runPagespeed?url=http://yahoo.com",
+    Object {
+      "method": "GET",
+    },
+  ],
+]
+`;
+
+exports[`Fetching Data fetchOne() 1`] = `
+Object {
+  "response_code": 200,
+  "speed_score": 69,
+  "title": "Yahoo",
+  "url": "https://www.yahoo.com/",
+}
+`;

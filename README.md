@@ -1,6 +1,10 @@
 # API Speed Test
 A Simple Koa APP to communicate with Google Page Speed API
 
+test this application on the following link:
+
+https://google-page-speed.herokuapp.com/speed_test
+
 install all dependecies
 
 ```js
