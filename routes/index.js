@@ -8,13 +8,16 @@ let router = new Router({
 }); 
 
 router.get('/', async (cnx, next) => {
-    await googleAPI.fetchMany(cnx.request.query.url)
+
+    urls = (cnx.request.query.url !== undefined ? cnx.request.query.url:['https://www.hotel-internet-marketing.com/', 'https://www.bbc.co.uk/', 'https://www.google.co.uk/'])
+    console.log(urls)
+    await googleAPI.fetchMany(urls)
     .then(data => {
         let filtered = data.map(element => {
             return {
                 title : element.title,
-                responseCode: element.responseCode,
-                speed : element.ruleGroups.SPEED.score,
+                response_code: element.responseCode,
+                speed_score : element.ruleGroups.SPEED.score,
                 url: element.id
             }
         })
