@@ -1,16 +1,18 @@
+'use strict';
+
 const Router = require('koa-router');
-var bodyParser = require('koa-bodyparser');
 
 const googleAPI = require('../fetch');
 
-let router = new Router({
-   prefix: '/speed_test'
-}); 
+let router = new Router(); 
 
-router.get('/', async (cnx, next) => {
+router.get('/', (cnx, next)=> {
+    cnx.body = "Welcome to Google Page Speed API"
+})
 
-    urls = (cnx.request.query.url !== undefined ? cnx.request.query.url:['https://www.hotel-internet-marketing.com/', 'https://www.bbc.co.uk/', 'https://www.google.co.uk/'])
-    console.log(urls)
+router.get('/speed_test', async (cnx, next) => {
+
+    let urls = (cnx.request.query.url !== undefined ? cnx.request.query.url:['https://www.hotel-internet-marketing.com/', 'https://www.bbc.co.uk/', 'https://www.google.co.uk/'])
     await googleAPI.fetchMany(urls)
     .then(data => {
         let filtered = data.map(element => {

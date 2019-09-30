@@ -1,7 +1,9 @@
+'use strict';
+
 const fetch = require('node-fetch');
 const config = require('../config');
 
-exports.fetchOne = fetchOne = url => new Promise( (resolve, reject)=> {
+const fetchOne = url => new Promise( (resolve, reject)=> {
     fetch(config.googlePageSpeed() + url, { method: 'GET' })
     .then(res =>  res.json())
     .then(json => {
@@ -15,7 +17,7 @@ exports.fetchOne = fetchOne = url => new Promise( (resolve, reject)=> {
 });
 
 
-exports.fetchMany =  urls => new Promise ( async (resolve,reject) => {
+const fetchMany =  urls => new Promise ( async (resolve,reject) => {
     let result = [];
     await (async () => {
         for (let i = 0; i < urls.length; i++) {
@@ -26,6 +28,7 @@ exports.fetchMany =  urls => new Promise ( async (resolve,reject) => {
     });
 });
 
+module.exports = {fetchOne, fetchMany};
 
 
 
