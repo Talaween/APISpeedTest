@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "a simple API to communicate with Google Page Speed API",
   "main": "index.js",
+  "engines": {
+    "node": "12.10.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
