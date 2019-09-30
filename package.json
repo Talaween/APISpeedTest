@@ -1,0 +1,30 @@
+{
+  "name": "apispeedtest",
+  "version": "1.0.0",
+  "description": "a simple API to communicate with Google Page Speed API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Talaween/APISpeedTest.git"
+  },
+  "keywords": [
+    "Google",
+    "Speed",
+    "API"
+  ],
+  "author": "Mahmoud Awad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Talaween/APISpeedTest/issues"
+  },
+  "homepage": "https://github.com/Talaween/APISpeedTest#readme",
+  "dependencies": {
+    "koa": "^2.8.2",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "node-fetch": "^2.6.0"
+  }
+}

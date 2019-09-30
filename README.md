@@ -1,2 +1,2 @@
-# APISpeedTest
-A Simple API to communicate with Google Speed API
+# API Speed Test
+A Simple API to communicate with Google Page Speed API
