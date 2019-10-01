@@ -25,7 +25,7 @@ const fetchMany =  urls => new Promise ( async (resolve,reject) => {
         }
     })().then(() => {
         resolve(result);
-    });
+    }).catch(err => reject(err) );
 });
 
 module.exports = {fetchOne, fetchMany};

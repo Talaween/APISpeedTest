@@ -13,6 +13,8 @@ router.get('/', (cnx, next)=> {
 router.get('/speed_test', async (cnx, next) => {
 
     let urls = (cnx.request.query.url !== undefined ? cnx.request.query.url:['https://www.hotel-internet-marketing.com/', 'https://www.bbc.co.uk/', 'https://www.google.co.uk/'])
+    urls = (urls.constructor === Array ? urls :[urls]);
+
     await googleAPI.fetchMany(urls)
     .then(data => {
         let filtered = data.map(element => {

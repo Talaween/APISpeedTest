@@ -33,7 +33,7 @@ if none is specified, the default urls are:
 ['https://www.hotel-internet-marketing.com/', 'https://www.bbc.co.uk/', 'https://www.google.co.uk/']
 
 example:
-http://localhost/speed_test?url=http://yahoo.com&url=http://hotmail.com
+http://localhost:8080/speed_test?url=http://yahoo.com&url=http://hotmail.com
 
 for this request the response will be
 
